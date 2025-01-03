@@ -1,0 +1,247 @@
+/* General Reset and Variables */
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color: rgb(148, 126, 4);
+    --secondary-color: #f3f1e2;
+    --text-color: #000;
+    --bg-color: #fff;
+    --box-shadow: 2px 2px 14px rgb(239 200 139 / 15%);
+}
+
+/* Sections */
+section {
+    padding: 50px 100px;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    background: var(--text-color);
+    transition: 0.5s linear;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    padding: 8px 17px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    background-color: var(--main-color);
+    border-radius: 1rem;
+    transition: 0.5s all linear;
+}
+
+.header-icon {
+    font-size: 22px;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.menu-icon {
+    color: var(--bg-color);
+    font-size: 22px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Search Box */
+.search-box {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--bg-color);
+    width: 100%;
+    transition: 0.35s ease-in-out;
+}
+
+.search-box.active {
+    top: 110%;
+    box-shadow: var(--box-shadow);
+}
+
+.search-box input {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+/* Home Section */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(img/background3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-text h1 {
+    font-size: 3.4rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Button */
+.btn {
+    padding: 10px 40px;
+    border-radius: 0.3rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: goldenrod;
+    transition: 0.3s ease;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.products, .cart {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.product, .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.product img, .cart-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.quantity-buttons button {
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1058px) {
+    header {
+        padding: 16px 60px;
+    }
+    section {
+        padding: 50px 60px;
+    }
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 4%;
+    }
+    .menu-icon {
+        display: initial;
+    }
+    .navbar {
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--secondary-color);
+        padding: 20px;
+        row-gap: 1.4rem;
+        text-align: center;
+    }
+    .navbar.active {
+        top: 100%;
+    }
+    .about {
+        align-items: center;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        padding: 11px 4%;
+    }
+    .logo img {
+        width: 45px;
+    }
+    .home-text h1 {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+    
